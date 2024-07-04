@@ -1940,7 +1940,7 @@ bool C_BasePlayer::ShouldDrawThisPlayer()
 			return true;
 		}
 	}
-	return false;
+	return true;
 }
 
 
