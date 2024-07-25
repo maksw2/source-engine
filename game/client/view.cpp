@@ -119,9 +119,9 @@ ConVar mat_viewportupscale( "mat_viewportupscale", "1", FCVAR_ARCHIVE, "Scale th
 ConVar cl_leveloverview( "cl_leveloverview", "0", FCVAR_CHEAT );
 
 #ifdef ANDROID
-#define MAPEXTENTS_DEFAULT "12288" // small optimization
+#define MAPEXTENTS_DEFAULT "16384" // small optimization
 #else
-#define MAPEXTENTS_DEFAULT "16384"
+#define MAPEXTENTS_DEFAULT "65536"
 #endif
 
 static ConVar r_mapextents( "r_mapextents", MAPEXTENTS_DEFAULT, FCVAR_CHEAT,
@@ -131,7 +131,8 @@ static ConVar r_mapextents( "r_mapextents", MAPEXTENTS_DEFAULT, FCVAR_CHEAT,
 ConVar	gl_clear( "gl_clear", "0");
 ConVar	gl_clear_randomcolor( "gl_clear_randomcolor", "0", FCVAR_CHEAT, "Clear the back buffer to random colors every frame. Helps spot open seams in geometry." );
 
-static ConVar r_farz( "r_farz", "-1", FCVAR_CHEAT, "Override the far clipping plane. -1 means to use the value in env_fog_controller." );
+// Secton: Let's not draw the entire horizontal part of the world for the optimization sakes
+static ConVar r_farz( "r_farz", "32768", FCVAR_CHEAT, "Override the far clipping plane. -1 means to use the value in env_fog_controller." );
 static ConVar cl_demoviewoverride( "cl_demoviewoverride", "0", 0, "Override view during demo playback" );
 
 
