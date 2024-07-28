@@ -9,9 +9,7 @@ this fork contains contains:
 2. increased edict limit
 3. drawviewmodel no longer a cheat
 4. increased number of projected textures
-IN PROGRESS:
-1. diffuse lighting
-2. panorama (maybe)
+
 Information from [wikipedia](https://wikipedia.org/wiki/Source_(game_engine)):
 
 Source is a 3D game engine developed by Valve.
